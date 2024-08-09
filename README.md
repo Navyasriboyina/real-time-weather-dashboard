@@ -23,7 +23,7 @@ Welcome to the React Weather App! This project provides real-time weather update
 - **Varcel :** A website to deploy your projects on web.
 
 ## Getting Started
-- **Deployed Link** -  CLICK HERE :smiley_cat:  <a href="https://updated-weatherapp.vercel.app/"> React-Weather-App </a>
+- **Deployed Link** -  CLICK HERE :smiley_cat:  <a href="https://sunnyweather.vercel.app/"> React-Weather-App </a>
 
 ### Prerequisites
 Ensure you have the following installed on your local machine:
