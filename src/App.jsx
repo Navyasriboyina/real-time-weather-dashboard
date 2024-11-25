@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { IoMdSunny, IoMdCloudy, IoMdRainy, IoMdSnow, IoMdThunderstorm, IoMdSearch } from "react-icons/io";
 import { BsCloudHaze2Fill, BsCloudDrizzleFill, BsEye, BsWater, BsThermometer, BsWind } from "react-icons/bs";
@@ -64,22 +65,22 @@ function App() {
             icon = <BsCloudHaze2Fill />;
             break;
         case "Rain":
-            icon = <IoMdRainy className="text-blue-500"/>;
+            icon = <IoMdRainy className="text-blue-500" />;
             break;
         case "Clear":
-            icon = <IoMdSunny className="text-yellow-300"/>;
+            icon = <IoMdSunny className="text-yellow-300" />;
             break;
         case "Drizzle":
-            icon = <BsCloudDrizzleFill className="text-blue-500"/>;
+            icon = <BsCloudDrizzleFill className="text-blue-500" />;
             break;
         case "Snow":
-            icon = <IoMdSnow className="text-blue-200"/>;
+            icon = <IoMdSnow className="text-blue-200" />;
             break;
         case "Thunderstorm":
             icon = <IoMdThunderstorm />;
             break;
         case "Mist":
-            icon = <BsCloudHaze2Fill className="text-blue-200"/>;
+            icon = <BsCloudHaze2Fill className="text-blue-200" />;
             break;
         default:
             icon = null;
@@ -88,25 +89,28 @@ function App() {
     const date = new Date();
 
     return (
-        <div className="w-full h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 lg:px-0">
+        <div className="w-full h-screen bg-gradient-to-r from-teal-500 via-cyan-500 to-gray-500 bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 lg:px-0">
             {error && (
-                <div className="bg-red-600 text-white p-4 rounded-full mb-4">
+                <div className="bg-red-500 text-white p-4 rounded-full mb-4">
                     {error}
                 </div>
             )}
             {/* Form Input */}
-            <form onSubmit={handleSubmit} className={`${animate ? "animate-bounce" : ""} h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8`}>
+            <form
+                onSubmit={handleSubmit}
+                className={`${animate ? "animate-bounce" : ""} h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8`}
+            >
                 <div className="h-full relative flex items-center justify-center p-2">
                     <input
                         onChange={handleInput}
-                        className="flex-1 bg-transparent outline-none placeholder:text-white text-white text-[15px] font-light pl-6 h-full"
+                        className="flex-1 bg-transparent outline-none placeholder:text-gray-200 text-gray-200 text-[15px] font-light pl-6 h-full"
                         type="text"
                         value={inputValue}
                         placeholder="Search by City or Country"
                     />
                     <button
                         type="submit"
-                        className="bg-pink-400 hover:bg-pink-600 w-20 h-12 rounded-full flex justify-center items-center transition"
+                        className="bg-cyan-400 hover:bg-cyan-600 w-20 h-12 rounded-full flex justify-center items-center transition"
                     >
                         <IoMdSearch className="text-2xl text-white" />
                     </button>
